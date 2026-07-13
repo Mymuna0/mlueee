@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://dwtp0kj05xejc"]
+
+[ext_resource type="PackedScene" uid="uid://ct5ut8i2coc1o" path="res://scenes/player.tscn" id="1_bpt1m"]
+[ext_resource type="Script" uid="uid://ceef5dc4f60hb" path="res://scripts/EndLine.cs" id="2_4lj41"]
+[ext_resource type="Texture2D" uid="uid://d1mrlfq0rd6am" path="res://icon.svg" id="3_mofoo"]
+[ext_resource type="AudioStream" uid="uid://c8njo2v5tcc7b" path="res://assets/musics/Ricky Montgomery - She is She is Lady (line without a hook) Slowed version Tiktok song - Rerew (128k).mp3" id="4_nr3cb"]
+[ext_resource type="Script" uid="uid://cdy6fuvc1b0t7" path="res://scripts/TouchJoystick.cs" id="5_j60wy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5h11f"]
+size = Vector2(37.38772, 45.197937)
+
+[node name="Level_01" type="Node2D" unique_id=998736499]
+
+[node name="Endline" type="Area2D" parent="." unique_id=1791106221]
+rotation = 1.0722687
+script = ExtResource("2_4lj41")
+GameOverScenePath = "uid://diwtge53r68gl"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Endline" unique_id=227248433]
+position = Vector2(115.48116, -72.446144)
+rotation = -0.37720102
+scale = Vector2(0.99999934, 0.99999934)
+shape = SubResource("RectangleShape2D_5h11f")
+
+[node name="Sprite2D" type="Sprite2D" parent="Endline" unique_id=891750955]
+position = Vector2(115.74307, -72.481316)
+rotation = -3.5051122
+scale = Vector2(0.30083895, 0.36301014)
+texture = ExtResource("3_mofoo")
+
+[node name="Player" parent="." unique_id=1684110134 node_paths=PackedStringArray("Joystick") groups=["Player"] instance=ExtResource("1_bpt1m")]
+position = Vector2(-3, -5)
+Joystick = NodePath("../CanvasLayer/TouchJoystick")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1512787207]
+position = Vector2(-63, -17)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1210795929]
+stream = ExtResource("4_nr3cb")
+volume_db = -13.352
+autoplay = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1138725636]
+
+[node name="TouchJoystick" type="Control" parent="CanvasLayer" unique_id=1629724023]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("5_j60wy")

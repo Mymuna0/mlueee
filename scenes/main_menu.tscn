@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://cdj1d8b07sbcw"]
+
+[ext_resource type="Script" uid="uid://dgk55wtwudci8" path="res://scripts/MainMenu.cs" id="1_l6cm7"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_l6cm7"]
+
+[node name="MainMenu" type="Control" unique_id=837064449]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1830294575 node_paths=PackedStringArray("PlayButton")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.7831447, 0.516764, 0.7788791, 1)
+script = ExtResource("1_l6cm7")
+GameOverScenePath = "uid://dwtp0kj05xejc"
+PlayButton = NodePath("Button")
+
+[node name="Label" type="Label" parent="ColorRect" unique_id=2139122249]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = -2.0
+offset_right = -1.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Hey to mlueee!!
+
+"
+label_settings = SubResource("LabelSettings_l6cm7")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="ColorRect" unique_id=2206190]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 528.0
+offset_top = 314.0
+offset_right = -559.96265
+offset_bottom = -303.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 0.0041427584
+scale = Vector2(1, 0.84000003)
+text = "Playyy"
