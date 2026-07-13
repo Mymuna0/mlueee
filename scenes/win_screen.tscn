@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://diwtge53r68gl"]
+
+[ext_resource type="Script" uid="uid://cu4oq8lgga1xl" path="res://scripts/WinScreen.cs" id="1_wv5lq"]
+
+[node name="WinScreen" type="Control" unique_id=1528497400]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -5.0
+offset_top = -29.0
+offset_right = -5.0
+offset_bottom = -29.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1613636441 node_paths=PackedStringArray("ReturnButton")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 18.0
+offset_bottom = 31.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.4627451, 0.4509804, 0.36078432, 1)
+script = ExtResource("1_wv5lq")
+GameOverScenePath = "uid://cdj1d8b07sbcw"
+ReturnButton = NodePath("Button")
+
+[node name="Button" type="Button" parent="ColorRect" unique_id=857415466]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 446.0
+offset_top = 317.0
+offset_right = -523.0
+offset_bottom = -314.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Return To MainMenu!!"
+
+[node name="Label" type="Label" parent="ColorRect" unique_id=1996106012]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 426.0
+offset_top = 219.0
+offset_right = -517.0
+offset_bottom = -373.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Yooo congratss!!
+You wonnnnn!!🍄"
+horizontal_alignment = 1
+vertical_alignment = 1
